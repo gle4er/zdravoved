@@ -1,1 +1,8 @@
-<h1>works</h1>
+{% if user.is_authenticated %}
+    <h1>good</h1>
+    <p>Кнопка разлогиниться</p>
+{% else %}
+<h1>new user</h1>
+<p>Кнопка зарегаться</p>
+<p>Кнопка залогиниться</p>
+{% endif %}
