@@ -1,8 +1,8 @@
 {% if user.is_authenticated %}
-    <h1>good</h1>
-    <p>Кнопка разлогиниться</p>
+<h1>Welcome, {{ user }}</h1>
+    <a href="{% url 'logout' %}">Кнопка разлогиниться</a>
 {% else %}
 <h1>new user</h1>
-<p>Кнопка зарегаться</p>
-<p>Кнопка залогиниться</p>
+<a href="{% url 'django_registration_register' %}">Кнопка зарегаться</a>
+<a href="{% url 'login' %}">Кнопка залогиниться</a>
 {% endif %}
