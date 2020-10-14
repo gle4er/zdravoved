@@ -127,3 +127,6 @@ USE_TZ = True
 STATIC_URL = '/static/'
 
 ACCOUNT_ACTIVATION_DAYS = 7 # One-week activation window
+
+# Celery settings
+CELERY_BROKER_URL = getenv('REDIS_URL')
